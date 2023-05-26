@@ -12,7 +12,8 @@ class _CategoriesState extends State<Categories> {
   var ChosenTimeSlot = null;
   void initState(){
     super.initState();
-    ChosenTimeSlot = "";
+
+    ;
   }
 
 var list = ['Accessories','Clothes','Phones','Computers','Dry Foods','Grocery','Furniture','More'];
@@ -30,6 +31,8 @@ var icons = [
   Widget build(BuildContext context){
     return GridView.builder(
         itemCount: list.length,
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
           gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,

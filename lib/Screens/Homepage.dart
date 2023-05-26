@@ -1,5 +1,6 @@
 import 'package:ecommerce/AppUtils/global.colors.dart';
 import 'package:ecommerce/Widgets/Categories.dart';
+import 'package:ecommerce/Widgets/ProductsCard.dart';
 import 'package:ecommerce/Widgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 
@@ -74,60 +75,23 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 SizedBox(height: 10,),
-                Container(
-                  height: 200,
-                    child: Categories()
-                ),
+                Categories(),
+
                 SizedBox(height: 10,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Mega Deal",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    Text(
-                      "View all >",
-                      style: TextStyle(
-                        color: GlobalColors.primaryColor,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                ),
+                Headings(title: "Mega Deal"),
                 SizedBox(height: 10,),
                 HorizontalButtonsList(),
 
                 SizedBox(height: 10,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Brands",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    Text(
-                      "View all >",
-                      style: TextStyle(
-                        color: GlobalColors.primaryColor,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                ),
+                Headings(title: "Brands"),
                 SizedBox(height: 10,),
-                Container(
-                  height: 200,
-                    child: Brand(),
-                ),
+                Brand(),
+
+                Headings(title: "Top Products"),
+                // SizedBox(
+                //   //height: 400,
+                //     child: ProductsCard()),
+                ProductsCard()
               ],
 
             )
@@ -139,6 +103,34 @@ class _HomePageState extends State<HomePage> {
           //height: 100,
           child: BottomNavBar()
       ),
+    );
+  }
+}
+
+class Headings extends StatelessWidget {
+  const Headings({Key? key, required this.title}) : super(key: key);
+ final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 17,
+              fontWeight: FontWeight.bold
+          ),
+        ),
+        Text(
+          "View all >",
+          style: TextStyle(
+            color: GlobalColors.primaryColor,
+            fontSize: 12,
+          ),
+        ),
+      ],
     );
   }
 }

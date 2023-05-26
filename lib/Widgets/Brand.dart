@@ -10,10 +10,10 @@ class Brand extends StatefulWidget {
 }
 
 class _BrandState extends State<Brand> {
-  var ChosenTimeSlot = null;
+
   void initState(){
     super.initState();
-    ChosenTimeSlot = "";
+    ;
   }
 
   var list = ['Nike','Mavi','Gucci','Apple','Adidas','Logitech','Samsung','Hp'];
@@ -32,6 +32,8 @@ class _BrandState extends State<Brand> {
   Widget build(BuildContext context){
     return GridView.builder(
         itemCount: list.length,
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
         gridDelegate:
         SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
@@ -43,7 +45,7 @@ class _BrandState extends State<Brand> {
             child: InkWell(
               onTap: (){
                 setState(() {
-                  ChosenTimeSlot = index;
+
                 });
               },
               // child: Container(
