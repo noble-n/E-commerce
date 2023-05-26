@@ -37,8 +37,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     fontSize: 35,
                   ),
                 ),
-                SizedBox(height: 50,),
-                Text(
+                const SizedBox(height: 50,),
+                const Text(
                   "Login to the app",
                   style: TextStyle(
                       color: Colors.black54,
@@ -46,16 +46,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       fontWeight: FontWeight.bold
                   ),
                 ),
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 Row(
                   children: [
                     InkWell(
                       onTap: () {
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => LoginScreen()),
+                          MaterialPageRoute(builder: (context) => const LoginScreen()),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         "Sign In",
                         style: TextStyle(
                           color: Colors.black54,
@@ -64,11 +64,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 25,),
+                    const SizedBox(width: 25,),
                     Text(
                       "Register",
                       style: TextStyle(
-                          shadows: [
+                          shadows: const [
                             Shadow(
                                 color: Colors.black,
                                 offset: Offset(0, -5))
@@ -85,29 +85,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                   ],
                 ),
-                Divider(),
-                SizedBox(height: 20,),
+                const Divider(),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: firstnameController, text: "Enter firstName", textInputType: TextInputType.text, obscure: false),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: lastnameController, text: "Enter lastName", textInputType: TextInputType.text, obscure: false),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: emailController, text: "Enter email", textInputType: TextInputType.text, obscure: false),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: passwordController, text: "Enter password", textInputType: TextInputType.visiblePassword, obscure: true,SuffixIcon: Icons.visibility_off,),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: confirmPasswordController, text: "Confirm password", textInputType: TextInputType.visiblePassword, obscure: true,SuffixIcon: Icons.visibility_off,),
 
 
-                SizedBox(height: 100,),
+                const SizedBox(height: 100,),
                 Container(
-                  padding: EdgeInsets.only(top: 7),
+                  padding: const EdgeInsets.only(top: 7),
                   height: 40,
                   width: 260,
                   decoration: BoxDecoration(
                     color: GlobalColors.primaryColor,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Register",
                     textAlign: TextAlign.center,
                     style: TextStyle(

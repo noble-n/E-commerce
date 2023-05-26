@@ -1,7 +1,6 @@
 import 'package:ecommerce/AppUtils/global.colors.dart';
 import 'package:ecommerce/Widgets/Categories.dart';
 import 'package:ecommerce/Widgets/ProductsCard.dart';
-import 'package:ecommerce/Widgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/BottomNavBar.dart';
@@ -40,10 +39,10 @@ class _HomePageState extends State<HomePage> {
                     Icon(Icons.shopping_cart_rounded,color: GlobalColors.primaryColor,size: 30,),
                   ],
                 ),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 SearchBar(searchController: _searchController),
 
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 Container(
                   height: 120,
                   width: 600,
@@ -53,11 +52,11 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Category",
                       style: TextStyle(
                           color: Colors.black,
@@ -74,24 +73,24 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 10,),
-                Categories(),
+                const SizedBox(height: 10,),
+                const Categories(),
 
-                SizedBox(height: 10,),
-                Headings(title: "Mega Deal"),
-                SizedBox(height: 10,),
-                HorizontalButtonsList(),
+                const SizedBox(height: 10,),
+                const Headings(title: "Mega Deal"),
+                const SizedBox(height: 10,),
+                const HorizontalButtonsList(),
 
-                SizedBox(height: 10,),
-                Headings(title: "Brands"),
-                SizedBox(height: 10,),
-                Brand(),
+                const SizedBox(height: 10,),
+                const Headings(title: "Brands"),
+                const SizedBox(height: 10,),
+                const Brand(),
 
-                Headings(title: "Top Products"),
+                const Headings(title: "Top Products"),
                 // SizedBox(
                 //   //height: 400,
                 //     child: ProductsCard()),
-                ProductsCard()
+                const ProductsCard()
               ],
 
             )
@@ -101,7 +100,7 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: Container(
           //height: 100,
-          child: BottomNavBar()
+          child: const BottomNavBar()
       ),
     );
   }
@@ -117,7 +116,7 @@ class Headings extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black,
               fontSize: 17,
               fontWeight: FontWeight.bold

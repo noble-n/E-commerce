@@ -4,12 +4,14 @@ import '../AppUtils/global.colors.dart';
 
 
 class ProductsCard extends StatefulWidget {
-  ProductsCard({Key? key}) : super(key: key);
+  const ProductsCard({Key? key}) : super(key: key);
+  @override
   _ProductsCardState createState() => _ProductsCardState();
 }
 
 class _ProductsCardState extends State<ProductsCard> {
 
+  @override
   void initState(){
     super.initState();
 
@@ -28,10 +30,10 @@ class _ProductsCardState extends State<ProductsCard> {
 
     return GridView.builder(
           itemCount: list.length,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(
+          const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 0.7
           ),
@@ -45,7 +47,7 @@ class _ProductsCardState extends State<ProductsCard> {
                   });
                 },
                 child: Container(
-                    padding: EdgeInsets.only(top: 10,bottom: 10),
+                    padding: const EdgeInsets.only(top: 10,bottom: 10),
                     alignment: Alignment.center,
                     height: 100,
                     decoration: BoxDecoration(
@@ -62,18 +64,18 @@ class _ProductsCardState extends State<ProductsCard> {
                     Column(
                       //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
+                        SizedBox(
                             height: 150,
                             child: FittedBox(
+                                fit: BoxFit.fitWidth,
                                 child: images[index],
-                              fit: BoxFit.fitWidth,
                             )
                         ),
                         Container(
-                          padding: EdgeInsets.only(right: 5,left: 5,top: 5),
+                          padding: const EdgeInsets.only(right: 5,left: 5,top: 5),
                           child: Column(
                             children: [
-                            Text(
+                            const Text(
                             "Lorem ipsum 80gm",
                             style: TextStyle(
                               color: Colors.black54,
@@ -81,7 +83,7 @@ class _ProductsCardState extends State<ProductsCard> {
                               fontSize: 16,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "1pcs/box",
                             style: TextStyle(
                               color: Colors.black54,
@@ -98,8 +100,8 @@ class _ProductsCardState extends State<ProductsCard> {
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
-                              SizedBox(width: 30,),
-                              Row(
+                              const SizedBox(width: 30,),
+                              const Row(
                                 children: [
                                   Text(
                                     "4.9",
@@ -116,7 +118,7 @@ class _ProductsCardState extends State<ProductsCard> {
                         ),
                         ),
 
-                        SizedBox(),
+                        const SizedBox(),
                       ],
                     )
 

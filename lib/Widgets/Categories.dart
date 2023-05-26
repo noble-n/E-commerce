@@ -4,16 +4,17 @@ import '../AppUtils/global.colors.dart';
 
 
 class Categories extends StatefulWidget {
-  Categories({Key? key}) : super(key: key);
+  const Categories({Key? key}) : super(key: key);
+  @override
   _CategoriesState createState() => _CategoriesState();
 }
 
 class _CategoriesState extends State<Categories> {
-  var ChosenTimeSlot = null;
+  var ChosenTimeSlot;
+  @override
   void initState(){
     super.initState();
 
-    ;
   }
 
 var list = ['Accessories','Clothes','Phones','Computers','Dry Foods','Grocery','Furniture','More'];
@@ -31,10 +32,10 @@ var icons = [
   Widget build(BuildContext context){
     return GridView.builder(
         itemCount: list.length,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
           gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(
+          const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
               childAspectRatio: 0.9
           ),
@@ -48,7 +49,7 @@ var icons = [
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.only(top: 10,bottom: 10),
+                  padding: const EdgeInsets.only(top: 10,bottom: 10),
                   alignment: Alignment.center,
                   height: 10,
                   decoration: BoxDecoration(
@@ -68,7 +69,7 @@ var icons = [
                            icons[index],
                            Text(
                              list[index],
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black54,
                               fontWeight: FontWeight.w600,
                               fontSize: 12,

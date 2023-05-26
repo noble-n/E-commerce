@@ -34,8 +34,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 35,
                   ),
                 ),
-                SizedBox(height: 50,),
-                Text(
+                const SizedBox(height: 50,),
+                const Text(
                     "Login to the app",
                   style: TextStyle(
                     color: Colors.black54,
@@ -43,13 +43,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontWeight: FontWeight.bold
                   ),
                 ),
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 Row(
                   children: [
                     Text(
                         "Sign In",
                     style: TextStyle(
-                        shadows: [
+                        shadows: const [
                           Shadow(
                               color: Colors.black,
                               offset: Offset(0, -5))
@@ -61,14 +61,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       decorationThickness: 5
                     ),
                     ),
-                    SizedBox(width: 25,),
+                    const SizedBox(width: 25,),
                     InkWell(
                       onTap: () {
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => RegisterScreen()),
+                          MaterialPageRoute(builder: (context) => const RegisterScreen()),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                           "Register",
                       style: TextStyle(
                         color: Colors.black54,
@@ -80,10 +80,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   ],
                 ),
-                Divider(),
-                SizedBox(height: 20,),
+                const Divider(),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: emailController, text: "Enter email", textInputType: TextInputType.text, obscure: false),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextFormGlobal(controller: passwordController, text: "Enter password", textInputType: TextInputType.visiblePassword, obscure: true,SuffixIcon: Icons.visibility_off,),
 
                 Row(
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 },
                               ),
                           ),
-                          Text("Remember me")
+                          const Text("Remember me")
                         ],
                       ),
                     ),
@@ -118,16 +118,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
 
-                SizedBox(height: 100,),
+                const SizedBox(height: 100,),
                 Container(
-                  padding: EdgeInsets.only(top: 7),
+                  padding: const EdgeInsets.only(top: 7),
                   height: 40,
                   width: 260,
                   decoration: BoxDecoration(
                     color: GlobalColors.primaryColor,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Sign In",
                     textAlign: TextAlign.center,
                     style: TextStyle(

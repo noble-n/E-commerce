@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 
 class BottomNavBar extends StatefulWidget {
-  BottomNavBar({
+  const BottomNavBar({
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +22,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       Icons.home,
       "Home",
       GlobalColors.primaryColor,
-      labelStyle: TextStyle(
+      labelStyle: const TextStyle(
         fontWeight: FontWeight.normal,
       ),
     ),
@@ -30,7 +30,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       Icons.mail_outline_rounded,
       "Messages",
       GlobalColors.primaryColor,
-      labelStyle: TextStyle(
+      labelStyle: const TextStyle(
         fontWeight: FontWeight.bold,
       ),
     ),
@@ -85,7 +85,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       // backgroundBoxShadow: <BoxShadow>[
       //   BoxShadow(color: Colors.black45, blurRadius: 10.0),
       // ],
-      animationDuration: Duration(milliseconds: 300),
+      animationDuration: const Duration(milliseconds: 300),
       selectedCallback: (int? selectedPos) {
         setState(() {
           this.selectedPos = selectedPos ?? 0;

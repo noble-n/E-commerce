@@ -4,12 +4,13 @@ import '../AppUtils/global.colors.dart';
 
 
 class HorizontalButtonsList extends StatefulWidget {
-  HorizontalButtonsList({Key? key}) : super(key: key);
+  const HorizontalButtonsList({Key? key}) : super(key: key);
+  @override
   _HorizontalButtonsListState createState() => _HorizontalButtonsListState();
 }
 
 class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
-  var ChosenHairstylist = null;
+  var ChosenHairstylist;
   // void initState(){
   //   super.initState();
   //   ChosenHairstylist = "";
@@ -25,7 +26,7 @@ class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
   ];
   @override
   Widget build(BuildContext context){
-    return Container(
+    return SizedBox(
         height: 130,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -58,22 +59,22 @@ class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(left: 120),
+                                margin: const EdgeInsets.only(left: 120),
                                 height: 16,
                                 width: 50,
                                 decoration: BoxDecoration(
                                   color: GlobalColors.primaryColor,
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5),topRight: Radius.circular(5))
+                                  borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(5),topRight: Radius.circular(5))
                                 ),
-                                child: Text(
+                                child: const Text(
                                   "10% off",
                                   style: TextStyle(
                                     color: Colors.white
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 15,),
-                              Text(
+                              const SizedBox(height: 15,),
+                              const Text(
                                 "Lorem ipsum 80gm",
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -81,7 +82,7 @@ class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
                                   fontSize: 16,
                                 ),
                               ),
-                              Text(
+                              const Text(
                                 "1pcs/box",
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -98,8 +99,8 @@ class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
                                       fontWeight: FontWeight.bold
                                     ),
                                   ),
-                                  SizedBox(width: 30,),
-                                  Row(
+                                  const SizedBox(width: 30,),
+                                  const Row(
                                     children: [
                                       Text(
                                         "4.9",
@@ -112,10 +113,10 @@ class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 15,)
+                              const SizedBox(height: 15,)
                             ],
                           ),
-                          SizedBox(),
+                          const SizedBox(),
                         ],
                       )
 

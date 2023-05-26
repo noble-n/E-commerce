@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 
-import '../AppUtils/global.colors.dart';
 
 
 class Brand extends StatefulWidget {
-  Brand({Key? key}) : super(key: key);
+  const Brand({Key? key}) : super(key: key);
+  @override
   _BrandState createState() => _BrandState();
 }
 
 class _BrandState extends State<Brand> {
 
+  @override
   void initState(){
     super.initState();
-    ;
   }
 
   var list = ['Nike','Mavi','Gucci','Apple','Adidas','Logitech','Samsung','Hp'];
@@ -32,10 +32,10 @@ class _BrandState extends State<Brand> {
   Widget build(BuildContext context){
     return GridView.builder(
         itemCount: list.length,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         gridDelegate:
-        SliverGridDelegateWithFixedCrossAxisCount(
+        const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
             childAspectRatio: 0.8
         ),
@@ -62,7 +62,7 @@ class _BrandState extends State<Brand> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         height: 70,
                         width: 70,
                         decoration: BoxDecoration(
@@ -77,10 +77,10 @@ class _BrandState extends State<Brand> {
                           ),
                           child: images[index]
                       ),
-                      SizedBox(height: 5,),
+                      const SizedBox(height: 5,),
                       Text(
                         list[index],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black54,
                           fontWeight: FontWeight.w600,
                           fontSize: 12,

@@ -10,7 +10,7 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 10,right: 10),
+      padding: const EdgeInsets.only(left: 10,right: 10),
       height: 40,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -27,7 +27,7 @@ class SearchBar extends StatelessWidget {
         keyboardType: TextInputType.emailAddress,
         obscureText: false,
         decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(width: 1,color: Colors.white),
           ),
           icon: Icon(Icons.search,color: GlobalColors.primaryColor,),

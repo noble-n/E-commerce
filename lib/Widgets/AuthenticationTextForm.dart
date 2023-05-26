@@ -1,12 +1,10 @@
-import 'package:ecommerce/Screens/LoginScreen.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../AppUtils/global.colors.dart';
 
 
 class TextFormGlobal extends StatefulWidget{
-  TextFormGlobal ({
+  const TextFormGlobal ({
     Key? key,
     required this.controller,
     required this.text,
