@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../Widgets/BottomNavBar.dart';
 import '../Widgets/Brand.dart';
+import '../Widgets/SearchBar.dart';
 import '../Widgets/horizontal.scrollable.buttons.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
