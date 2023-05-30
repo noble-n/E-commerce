@@ -101,8 +101,8 @@ class _ProductsCardState extends State<ProductsCard> {
                                 ),
                               ),
                               const SizedBox(width: 30,),
-                               Row(
-                                children: const [
+                               const Row(
+                                children: [
                                   Text(
                                     "4.9",
                                     style: TextStyle(

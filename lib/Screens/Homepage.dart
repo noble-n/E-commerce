@@ -1,11 +1,11 @@
 import 'package:ecommerce/AppUtils/global.colors.dart';
 import 'package:ecommerce/Widgets/Categories.dart';
+import 'package:ecommerce/Widgets/Search_Bar.dart';
 import 'package:ecommerce/Widgets/ProductsCard.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/BottomNavBar.dart';
 import '../Widgets/Brand.dart';
-import '../Widgets/SearchBar.dart';
 import '../Widgets/horizontal.scrollable.buttons.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 const SizedBox(height: 10,),
-                SearchBar(searchController: _searchController),
+                Search_Bar(searchController: _searchController),
 
                 const SizedBox(height: 15,),
                 Container(

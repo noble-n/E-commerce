@@ -25,10 +25,6 @@ class TextFormGlobal extends StatefulWidget{
 class _TextFormGlobalState extends State<TextFormGlobal> {
   bool _passwordVisible = true;
 
-  @override
-
-
-
   void _togglePasswordView() {
     setState(() {
       _passwordVisible = !_passwordVisible;
