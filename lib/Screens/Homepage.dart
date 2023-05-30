@@ -54,26 +54,7 @@ class _HomePageState extends State<HomePage> {
 
                 ),
                 const SizedBox(height: 20,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Category",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 17,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    Text(
-                        "View all >",
-                      style: TextStyle(
-                        color: GlobalColors.primaryColor,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                ),
+                const Headings(title: "Categories"),
                 const SizedBox(height: 10,),
                 const Categories(),
 
