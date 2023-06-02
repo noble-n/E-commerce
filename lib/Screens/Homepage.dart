@@ -3,7 +3,6 @@ import 'package:ecommerce/Widgets/Categories.dart';
 import 'package:ecommerce/Widgets/Search_Bar.dart';
 import 'package:ecommerce/Widgets/ProductsCard.dart';
 import 'package:flutter/material.dart';
-
 import '../Widgets/BottomNavBar.dart';
 import '../Widgets/Brand.dart';
 import '../Widgets/horizontal.scrollable.buttons.dart';
@@ -37,7 +36,24 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold
                      ),
                     ),
-                    Icon(Icons.shopping_cart_rounded,color: GlobalColors.primaryColor,size: 30,),
+                    Row(
+                      children: [
+                        const Icon(Icons.shopping_cart_rounded,color: Colors.white,size: 30,),
+                        const Icon(Icons.notifications,color: Colors.white,size: 30,),
+                        const SizedBox(width: 10,),
+                        InkWell(
+                          onTap: (){
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(builder: (context) => Profile()),
+                            // );
+                          },
+                          child: const CircleAvatar(
+                            radius: 20,
+                            backgroundImage: AssetImage('Images/profilepicture.png'),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
                 const SizedBox(height: 10,),
@@ -80,10 +96,7 @@ class _HomePageState extends State<HomePage> {
 
         ),
       ),
-      bottomNavigationBar: Container(
-          //height: 100,
-          child: const BottomNavBar()
-      ),
+     bottomNavigationBar: const BottomNavBar(),
     );
   }
 }

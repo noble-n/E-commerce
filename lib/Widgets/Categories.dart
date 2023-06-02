@@ -10,7 +10,7 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  var ChosenTimeSlot;
+
   @override
   void initState(){
     super.initState();
@@ -44,9 +44,7 @@ var icons = [
               padding: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: (){
-                  setState(() {
-                    ChosenTimeSlot = index;
-                  });
+
                 },
                 child: Container(
                   padding: const EdgeInsets.only(top: 10,bottom: 10),

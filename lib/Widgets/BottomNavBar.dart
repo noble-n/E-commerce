@@ -1,5 +1,6 @@
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:ecommerce/AppUtils/global.colors.dart';
+import 'package:ecommerce/Screens/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 
@@ -63,6 +64,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
    return bottomNav();
   }
+
 
 
   Widget bottomNav() {

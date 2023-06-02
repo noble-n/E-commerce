@@ -66,6 +66,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
+    - Images/profilepicture.png
     - Images/headphones.jpg
     - Images/leathershoes.jpg
     - Images/trainers.jpg

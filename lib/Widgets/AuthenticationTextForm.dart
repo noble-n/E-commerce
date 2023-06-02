@@ -3,26 +3,26 @@ import 'package:flutter/material.dart';
 import '../AppUtils/global.colors.dart';
 
 
-class TextFormGlobal extends StatefulWidget{
-  const TextFormGlobal ({
+class AuthenticationTextFormGlobal extends StatefulWidget{
+  const AuthenticationTextFormGlobal ({
     Key? key,
     required this.controller,
     required this.text,
     required this.textInputType,
     required this.obscure,
-    this.SuffixIcon,})
+    this.suffixIcon,})
     : super (key: key);
   final TextEditingController controller;
   final String text;
   final TextInputType textInputType;
   final bool obscure;
-  final IconData? SuffixIcon;
+  final IconData? suffixIcon;
 
   @override
-  State<TextFormGlobal> createState() => _TextFormGlobalState();
+  State<AuthenticationTextFormGlobal> createState() => _AuthenticationTextFormGlobalState();
 }
 
-class _TextFormGlobalState extends State<TextFormGlobal> {
+class _AuthenticationTextFormGlobalState extends State<AuthenticationTextFormGlobal> {
   bool _passwordVisible = true;
 
   void _togglePasswordView() {
@@ -69,7 +69,7 @@ class _TextFormGlobalState extends State<TextFormGlobal> {
             onTap: _togglePasswordView,
             child : Icon(
               _passwordVisible
-                  ? widget.SuffixIcon
+                  ? widget.suffixIcon
                   : Icons.visibility,color:GlobalColors.primaryColor,
               //Icons.visibility, color: Color(0xff138D1f),
             ),

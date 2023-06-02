@@ -1,3 +1,4 @@
+import 'package:ecommerce/Screens/Homepage.dart';
 import 'package:ecommerce/Screens/RegisterScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -82,9 +83,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const Divider(),
                 const SizedBox(height: 20,),
-                TextFormGlobal(controller: emailController, text: "Enter email", textInputType: TextInputType.text, obscure: false),
+                AuthenticationTextFormGlobal(controller: emailController, text: "Enter email", textInputType: TextInputType.text, obscure: false),
                 const SizedBox(height: 20,),
-                TextFormGlobal(controller: passwordController, text: "Enter password", textInputType: TextInputType.visiblePassword, obscure: true,SuffixIcon: Icons.visibility_off,),
+                AuthenticationTextFormGlobal(controller: passwordController, text: "Enter password", textInputType: TextInputType.visiblePassword, obscure: true,suffixIcon: Icons.visibility_off,),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,21 +120,28 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
                 const SizedBox(height: 100,),
-                Container(
-                  padding: const EdgeInsets.only(top: 7),
-                  height: 40,
-                  width: 260,
-                  decoration: BoxDecoration(
-                    color: GlobalColors.primaryColor,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: const Text(
-                    "Sign In",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17,
+                InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 7),
+                    height: 40,
+                    width: 260,
+                    decoration: BoxDecoration(
+                      color: GlobalColors.primaryColor,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Text(
+                      "Sign In",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                      ),
                     ),
                   ),
                 )

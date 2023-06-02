@@ -100,8 +100,8 @@ class _HorizontalButtonsListState extends State<HorizontalButtonsList> {
                                     ),
                                   ),
                                   const SizedBox(width: 30,),
-                                   const Row(
-                                    children: [
+                                    Row(
+                                    children: const [
                                       Text(
                                         "4.9",
                                         style: TextStyle(
